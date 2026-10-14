@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const contactEmail = "sentyrn@protonmail.com";
 const contactHref = `mailto:${contactEmail}`;
 
@@ -12,7 +14,10 @@ export default function Home() {
           <p className="text-[13px] font-medium tracking-[0.22em] text-foreground">
             SENTYRN
           </p>
-          <nav aria-label="Primary">
+          <nav aria-label="Primary" className="flex items-center gap-6 md:gap-8">
+            <Link href="/why-sentyrn" className={`text-sm ${linkClassName}`}>
+              Why Sentyrn
+            </Link>
             <a href={contactHref} className={`text-sm ${linkClassName}`}>
               Contact
             </a>
@@ -36,6 +41,16 @@ export default function Home() {
             sensitive information, and execute actions, Sentyrn focuses on
             keeping those capabilities within explicitly authorized boundaries.
           </p>
+
+          <Link
+            href="/why-sentyrn"
+            className="group mt-10 inline-flex items-center gap-3 border-b border-line pb-2 text-sm font-medium text-foreground transition-colors hover:border-accent hover:text-accent focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-accent"
+          >
+            What makes Sentyrn different
+            <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">
+              →
+            </span>
+          </Link>
 
           <p className="mt-24 flex items-center gap-3 font-mono text-xs tracking-wide text-muted md:mt-32">
             <span
