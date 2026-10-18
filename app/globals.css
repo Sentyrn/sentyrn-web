@@ -1,29 +1,52 @@
 @import "tailwindcss";
 
-@theme {
-  --color-background: #050505;
-  --color-foreground: #fafafa;
-  --color-muted: #999999;
-  --color-line: #242424;
-  --color-accent: #6795ff;
+:root {
+  --surface-background: #050505;
+  --surface-foreground: #fafafa;
+  --surface-muted: #999999;
+  --surface-line: #242424;
+  --surface-accent: #6795ff;
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  --surface-background: #ffffff;
+  --surface-foreground: #111111;
+  --surface-muted: #626262;
+  --surface-line: #e5e5e5;
+  --surface-accent: #2456de;
+  color-scheme: light;
 }
 
 @theme inline {
+  --color-background: var(--surface-background);
+  --color-foreground: var(--surface-foreground);
+  --color-muted: var(--surface-muted);
+  --color-line: var(--surface-line);
+  --color-accent: var(--surface-accent);
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 }
 
-html {
-  background-color: #050505;
-  color-scheme: dark;
-}
-
+html,
 body {
-  background-color: #050505;
-  color: #fafafa;
+  background-color: var(--surface-background);
+  color: var(--surface-foreground);
 }
 
 ::selection {
-  background-color: #242424;
-  color: #fafafa;
+  background-color: var(--surface-foreground);
+  color: var(--surface-background);
+}
+
+.theme-dark-choice {
+  display: none;
+}
+
+:root[data-theme="light"] .theme-light-choice {
+  display: none;
+}
+
+:root[data-theme="light"] .theme-dark-choice {
+  display: inline;
 }
