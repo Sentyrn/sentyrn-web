@@ -30,7 +30,7 @@ export default function SiteBrand() {
       className="inline-flex shrink-0 items-center gap-2.5 text-foreground transition-opacity hover:opacity-75 focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-accent"
     >
       <SentyrnMark className="size-8 shrink-0" />
-      <span className="text-[13px] font-semibold tracking-[0.20em]">
+      <span className="hidden text-[13px] font-semibold tracking-[0.20em] min-[360px]:inline">
         SENTYRN
       </span>
     </Link>
