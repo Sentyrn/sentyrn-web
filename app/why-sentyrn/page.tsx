@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import SiteHeader from "@/components/site-header";
 
 export const metadata: Metadata = {
   title: "Why Sentyrn",
@@ -16,24 +16,7 @@ const linkClassName =
 export default function WhySentyrn() {
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="px-6 md:px-10">
-        <div className="mx-auto flex w-full max-w-[1100px] items-center justify-between py-8 md:py-10">
-          <Link
-            href="/"
-            className="text-[13px] font-medium tracking-[0.22em] text-foreground transition-colors hover:text-accent focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-accent"
-          >
-            SENTYRN
-          </Link>
-          <nav aria-label="Primary" className="flex items-center gap-6 md:gap-8">
-            <Link href="/" className={`text-sm ${linkClassName}`}>
-              Home
-            </Link>
-            <a href={contactHref} className={`text-sm ${linkClassName}`}>
-              Contact
-            </a>
-          </nav>
-        </div>
-      </header>
+      <SiteHeader page="why" />
 
       <main className="flex-1 px-6 md:px-10">
         <div className="mx-auto w-full max-w-[1100px] pt-14 pb-20 md:pt-24 md:pb-28">
