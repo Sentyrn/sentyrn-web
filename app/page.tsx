@@ -1,4 +1,5 @@
 import Link from "next/link";
+import SiteHeader from "@/components/site-header";
 
 const contactEmail = "sentyrn@protonmail.com";
 const contactHref = `mailto:${contactEmail}`;
@@ -9,21 +10,7 @@ const linkClassName =
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="px-6 md:px-10">
-        <div className="mx-auto flex w-full max-w-[1100px] items-center justify-between py-8 md:py-10">
-          <p className="text-[13px] font-medium tracking-[0.22em] text-foreground">
-            SENTYRN
-          </p>
-          <nav aria-label="Primary" className="flex items-center gap-6 md:gap-8">
-            <Link href="/why-sentyrn" className={`text-sm ${linkClassName}`}>
-              Why Sentyrn
-            </Link>
-            <a href={contactHref} className={`text-sm ${linkClassName}`}>
-              Contact
-            </a>
-          </nav>
-        </div>
-      </header>
+      <SiteHeader page="home" />
 
       <main className="flex-1 px-6 md:px-10">
         <div className="mx-auto w-full max-w-[1100px] pt-16 pb-20 md:pt-28 md:pb-24 lg:pt-36">
