@@ -18,7 +18,8 @@ export const metadata: Metadata = {
     "Sentyrn is building independent security infrastructure for enterprise AI agents.",
   applicationName: "Sentyrn",
   icons: {
-    icon: [{ url: "/sentyrn-icon-dark.svg", type: "image/svg+xml" }],
+    icon: [{ url: "/favicon-64.png", sizes: "64x64", type: "image/png" }],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
 };
 
